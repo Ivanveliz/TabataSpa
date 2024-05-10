@@ -1,0 +1,148 @@
+html{
+    
+    font-family: sans-serif;
+    font-size: 16px;
+    background-color: var(--brackgound-clr);
+    color: snow;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --brackgound-clr: rgb(17,17,17) 
+}
+
+.title{
+    margin: 1rem;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    max-width: 50%;
+    margin: auto ;
+    gap: 1.5rem;
+    height: 100vh;
+    
+}
+
+.link{
+    height: 3rem;
+    background-color:var(--brackgound-clr) ;
+    cursor: pointer;
+    outline: none;
+    color: snow;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border: 1px solid snow;
+    border-radius: 5px;
+    text-align: center;
+    padding: .5rem;
+    text-decoration: none;
+    
+}
+
+.footer{
+    padding: .5rem;
+    text-align: right;
+    opacity: .75;
+    font-size: .8rem;
+}
+
+.container-button .button-return img {
+    max-width: 100%;
+    width: auto;
+
+}
+
+.container-button{
+   
+    background-color: var(--brackgound-clr);
+    float: inline-end;
+}
+.container-button .button-return{
+    cursor: pointer;
+    width: 3rem;
+    background-color: var(--brackgound-clr);
+    border-radius: 50%;
+    
+    
+    padding: 5px;
+    border: none;
+}
+
+.container-display{
+    font-size: 10rem;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.container-set-ups{
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+input[type="number"] {
+  width: 10rem; 
+  height: 4rem;
+  padding: 1rem; 
+  border: 4px solid snow;
+  border-radius: 5px; 
+  font-size: 1.5rem;
+  background-color: var(--brackgound-clr);
+}
+
+input[type="number"]:focus{
+    outline: none;
+    border-color: snow;
+    color: snow;
+    
+}
+
+
+@media screen and (max-width: 400px) {
+
+    #app{
+        display: flex;
+        flex-direction: column;
+    }
+    .title{
+        margin: .5rem;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .container-display{
+        font-size: 3rem;
+        width: 70%;
+        margin: auto;
+        text-align: center;
+        
+    }
+
+    .button-return{
+        cursor: pointer;
+        width: 2rem;
+        background-color: var(--brackgound-clr);
+        border-radius: 50%;
+        float: inline-end;
+        margin:0.5rem;
+        padding: 5px;
+        border: none;
+        display: block;
+    }
+    .container-set-ups{
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+        font-size: 2rem;
+        
+    }
+  }
