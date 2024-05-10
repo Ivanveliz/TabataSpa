@@ -3,9 +3,8 @@ export default function ButtonReturn() {
     let $ButtonReturn = document.createElement('div')
     $ButtonReturn.classList.add('container-button')
     $ButtonReturn.innerHTML = `
-        
-            <button class="button-return">
-                <img src='../../public/arrow.svg' alt="volver">
+                    <button class="button-return">
+                <img src="../../public/arrow.svg" alt="volver">
             </button>
         
         `    
