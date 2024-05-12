@@ -10,7 +10,6 @@ export default function Emom() {
     document.querySelector('#app').appendChild($titleEmom)
     ButtonReturn()
     SetUpsMinutes()
-   
     ButtonStart()
     
 }
