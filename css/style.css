@@ -1,39 +1,47 @@
-html{
-    
+html {
+
     font-family: sans-serif;
     font-size: 16px;
     background-color: var(--brackgound-clr);
     color: snow;
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    --brackgound-clr: rgb(17,17,17) 
+    --brackgound-clr: rgb(17, 17, 17)
 }
 
-.title{
+.title {
     margin: 1rem;
     text-align: center;
     font-size: 2.5rem;
+    text-transform: uppercase;
 }
 
+#app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
-.menu{
+.menu {
     display: flex;
     flex-direction: column;
     padding-top: 2rem;
-    max-width: 50%;
-    margin: auto ;
+    max-width: 80%;
+    width: 50%;
+    margin: auto;
     gap: 1.5rem;
     height: 100vh;
-    
+
+
 }
 
-.link{
+.link {
     height: 3rem;
-    background-color:var(--brackgound-clr) ;
+    background-color: var(--brackgound-clr);
     cursor: pointer;
     outline: none;
     color: snow;
@@ -44,10 +52,16 @@ html{
     text-align: center;
     padding: .5rem;
     text-decoration: none;
-    
+    transition: .3s ease;
+
 }
 
-.footer{
+.link:hover {
+    background-color: snow;
+    color: var(--brackgound-clr);
+}
+
+.footer {
     padding: .5rem;
     text-align: right;
     opacity: .75;
@@ -60,89 +74,140 @@ html{
 
 }
 
-.container-button{
-   
+.container-button {
+
     background-color: var(--brackgound-clr);
-    float: inline-end;
+    padding-right: 1rem;
 }
-.container-button .button-return{
+
+.button-return {
     cursor: pointer;
     width: 3rem;
     background-color: var(--brackgound-clr);
     border-radius: 50%;
-    
-    
+    float: inline-end;
     padding: 5px;
     border: none;
 }
 
-.container-display{
+.container-display {
     font-size: 10rem;
     width: 80%;
     margin: auto;
     text-align: center;
 }
 
-.container-set-ups{
+.container-set-ups {
     text-align: center;
     font-size: 3rem;
     text-transform: uppercase;
-}
-input[type="number"] {
-  width: 10rem; 
-  height: 4rem;
-  padding: 1rem; 
-  border: 4px solid snow;
-  border-radius: 5px; 
-  font-size: 1.5rem;
-  background-color: var(--brackgound-clr);
+    width: 80%;
+    margin: auto;
+
 }
 
-input[type="number"]:focus{
+.set-ups{
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.emom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="number"] {
+    width: 10rem;
+    height: 4rem;
+    padding: 1rem;
+    color: snow;
+    border: 4px solid snow;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    background-color: var(--brackgound-clr);
+}
+
+input[type="number"]:focus {
     outline: none;
     border-color: snow;
     color: snow;
-    
+
 }
 
+.button-start {
+    margin: 1rem;
+    width: 25%;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 2px solid snow;
+    cursor: pointer;
+    background-color: transparent;
+    color: snow;
+    font-size: 2rem;
+    transition: .3s ease;
+}
+
+.button-start:hover {
+    background-color: snow;
+    color: var(--brackgound-clr);
+}
+
+.primero {
+    text-align: left;
+}
+
+.segundo {
+    text-align: right;
+}
 
 @media screen and (max-width: 400px) {
 
-    #app{
+    #app {
         display: flex;
         flex-direction: column;
     }
-    .title{
+
+    .title {
         margin: .5rem;
         text-align: center;
         font-size: 2rem;
     }
 
-    .container-display{
+    .container-display {
         font-size: 3rem;
         width: 70%;
         margin: auto;
         text-align: center;
-        
+
     }
 
-    .button-return{
+    .button-return {
         cursor: pointer;
         width: 2rem;
         background-color: var(--brackgound-clr);
         border-radius: 50%;
         float: inline-end;
-        margin:0.5rem;
+        margin: 0.5rem;
         padding: 5px;
         border: none;
         display: block;
     }
-    .container-set-ups{
+
+    .container-set-ups {
         display: flex;
-        gap: 1rem;
+        gap: .5rem;
         flex-direction: column;
         align-items: center;
-        font-size: 2rem;
-        
+        font-size: 1.5rem;
+
     }
-  }
+
+    .button-start {
+       width: 50%;
+    }
+}

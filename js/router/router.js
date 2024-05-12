@@ -21,16 +21,16 @@ export default function handleRoute(path) {
         forTime();
         break;
     case '/amrap':
-        renderAmrapPage();
+        amrap();
         break;
     case '/emom':
-        renderEmomPage();
+        emom();
         break;
     case '/tabata':
-        renderTabataPage();
+        tabata();
         break;
     default:
-        renderErrorPage();
+        App();
         break;
 }
   

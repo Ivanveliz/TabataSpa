@@ -1,11 +1,13 @@
 import ButtonReturn from "../components/ButtonReturn.js";
-import setUpsForTime from "../components/SetUpsForTime.js";
+import setUpsForTimeAmrap from "../components/SetUpsForTimeAmrap.js";
+import ButtonStart from "../components/buttonStart.js";
 export function forTime() {
     let $titleForTime = document.createElement('h2')
     $titleForTime.classList.add('title')
-    $titleForTime.innerText = 'For Time'
+    $titleForTime.innerText = 'FOR TIME'
     
     document.getElementById('app').appendChild($titleForTime);
     ButtonReturn()
-    setUpsForTime()
+    setUpsForTimeAmrap()
+    ButtonStart()
 }
