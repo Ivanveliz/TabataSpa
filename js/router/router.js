@@ -4,36 +4,45 @@ import clock from "../pages/Clock.js"
 import amrap from "../pages/Amrap.js"
 import { App } from "../../App.js";
 import tabata from "../pages/Tabata.js"
-import emom from "../pages/Emom.js"
+import emom from "../pages/emom.js"
+import ButtonStart from "../components/buttonStart.js";
 
 export default function handleRoute(path) {
-  const $app = document.querySelector('#app')
-  $app.innerHTML = ""
+    const $app = document.querySelector('#app')
+    
+    $app.innerHTML = ""
 
   switch (path) {
-    case '/':
+      case '/':
+        location.hash = "/"
         App();
         break;
-    case '/clock':
+      case '/clock':
+        location.hash = "/clock"
         clock();
         break;
-    case '/fortime':
-        forTime();
+      case '/fortime':
+          location.hash = "/fortime"
+          forTime();
+         
+          
         break;
-    case '/amrap':
+      case '/amrap':
+        location.hash = '/amrap'
         amrap();
         break;
-    case '/emom':
+      case '/emom':
+        location.hash = '/emom'
         emom();
         break;
-    case '/tabata':
+      case '/tabata':
+        location.hash = '/tabata'
         tabata();
-        break;
+          break;
+           
     default:
         App();
         break;
 }
   
-  
-
 }

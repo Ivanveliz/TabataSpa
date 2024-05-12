@@ -1,13 +1,21 @@
 import ButtonReturn from "../components/ButtonReturn.js";
 import setUpsForTimeAmrap from "../components/SetUpsForTimeAmrap.js";
 import ButtonStart from "../components/buttonStart.js";
+
+
 export function forTime() {
+    document.getElementById('app').innerHTML = ""
     let $titleForTime = document.createElement('h2')
     $titleForTime.classList.add('title')
     $titleForTime.innerText = 'FOR TIME'
     
     document.getElementById('app').appendChild($titleForTime);
     ButtonReturn()
-    setUpsForTimeAmrap()
-    ButtonStart()
+    setUpsForTimeAmrap(function (totalSec) {
+        ButtonStart(totalSec)
+    })
+    
+
+    
+        
 }

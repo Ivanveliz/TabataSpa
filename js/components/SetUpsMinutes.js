@@ -12,5 +12,6 @@ export default function SetUpsMinutes() {
     `
    
     document.querySelector('#app').appendChild($containerSetUps)
+    
     SetUpsRounds()
     }
