@@ -4,8 +4,8 @@ import clock from "../pages/Clock.js"
 import amrap from "../pages/Amrap.js"
 import { App } from "../../App.js";
 import tabata from "../pages/Tabata.js"
-import emom from "../pages/emom.js"
-import ButtonStart from "../components/buttonStart.js";
+import Emom from "../pages/Emom.js";
+
 
 export default function handleRoute(path) {
     const $app = document.querySelector('#app')
@@ -33,7 +33,7 @@ export default function handleRoute(path) {
         break;
       case '/emom':
         location.hash = '/emom'
-        emom();
+        Emom();
         break;
       case '/tabata':
         location.hash = '/tabata'
