@@ -1,15 +1,15 @@
-import Display from "../components/DisplayGeneral.js";
+import DisplayGeneral from "../components/DisplayGeneral";
 
 
-export default function handleCoutnDown(hash, value) {
+export default function handleCoutnDown(hash, time) {
 
     switch (hash) {
         case '#/fortime':
-            Display(value)
+            DisplayGeneral(time)
             
             break;
         case '#/amrap':
-            Display()
+            DisplayGeneral(time)
             break;
          case '#/emom':
             console.log('emom')
