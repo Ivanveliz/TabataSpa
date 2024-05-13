@@ -1,8 +1,9 @@
 import DisplayCountDown from "../components/DisplayCountDown.js"
+import AudioPlayer from "./AudioPlayer.js"
 import handleCoutnDown from "./handleCountDown.js"
 
 export default function  countDown(totalsec) {
-    
+    let startAudio = new AudioPlayer("../../public/sounds/start.mp3")
     const $containerDisplay = DisplayCountDown()
     let $app = document.querySelector('#app')
     let $countDown = 10
@@ -14,6 +15,9 @@ export default function  countDown(totalsec) {
         if ($countDown > 1) {
             $countDown--;
             $containerDisplay.textContent = $countDown;
+            if ($countDown === 3) {
+                startAudio.play()
+            }
         } else {
             clearInterval(interval); 
             

@@ -11,11 +11,9 @@ export function forTime() {
     
     document.getElementById('app').appendChild($titleForTime);
     ButtonReturn()
+    
     setUpsForTimeAmrap(function (totalSec) {
         ButtonStart(totalSec)
     })
-    
-
-    
-        
+         
 }

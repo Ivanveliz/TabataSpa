@@ -9,12 +9,15 @@ export default function setUpsForTimeAmrap(callback){
     <span class="span">minutes</span>
     `
     document.querySelector('#app').appendChild($containerSetUps)
+  
     let totalSec
+  
     let number = document.querySelector('#number')
-    number.addEventListener('input', function () {
+  number.addEventListener('input', function () {
+    if (!totalSec) {
       totalSec = calculeTotalSeconds(number.value)
       callback(totalSec)
+      }
     })
-  
   
 }

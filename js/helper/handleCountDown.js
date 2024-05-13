@@ -1,4 +1,4 @@
-import DisplayGeneral from "../components/DisplayGeneral";
+import DisplayGeneral from "../components/DisplayGeneral.js";
 
 
 export default function handleCoutnDown(hash, time) {

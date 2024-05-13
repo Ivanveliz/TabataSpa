@@ -8,6 +8,7 @@ export default function ButtonStart(totalsec) {
     $buttonStart.classList.add('button-start')
 
     document.querySelector('#app').appendChild($buttonStart)
+  
 
     document.querySelector('#button-start').addEventListener('click', e => {
         countDown(totalsec)
