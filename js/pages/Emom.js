@@ -1,5 +1,5 @@
 import ButtonReturn from "../components/ButtonReturn.js"
-import ButtonStart from "../components/buttonStart.js"
+import ButtonStart from "../components/ButtonStart.js"
 import SetUpsMinutes from "../components/SetUpsMinutes.js"
 
 export default function Emom() {

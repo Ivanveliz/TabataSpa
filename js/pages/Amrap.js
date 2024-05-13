@@ -1,6 +1,7 @@
 import ButtonReturn from "../components/ButtonReturn.js"
 import setUpsForTimeAmrap from "../components/SetUpsForTimeAmrap.js"
-import ButtonStart from "../components/buttonStart.js"
+import ButtonStart from "../components/ButtonStart.js"
+
 
 
 export default function amrap() {

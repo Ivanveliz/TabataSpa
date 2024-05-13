@@ -1,4 +1,3 @@
-
 import { forTime } from "../pages/ForTime.js"
 import clock from "../pages/Clock.js"
 import amrap from "../pages/Amrap.js"

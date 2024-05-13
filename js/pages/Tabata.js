@@ -3,7 +3,7 @@ import SetTimeRest from "../components/SetTImeRest.js"
 import SetTimeWork from "../components/SetTimeWork.js"
 import SetUpsRounds from "../components/SetUpsRounds.js"
 import TotalMinutes from "../components/TotalMinutes.js"
-import ButtonStart from "../components/buttonStart.js"
+import ButtonStart from "../components/ButtonStart.js"
 
 export default function tabata() {
     document.getElementById('app').innerHTML = ""
