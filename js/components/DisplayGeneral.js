@@ -1,6 +1,6 @@
 import { calcTotalMinSec } from "../helper/calMinSec.js"
 
-export default function Display(value) {
+export default function DisplayGeneral(value) {
     
     let countDown = 0
     let minutesDisplay

@@ -1,4 +1,5 @@
-import Display from '../components/display.js';
+import Display from "../components/DisplayGeneral.js";
+
 
 export default function handleCoutnDown(hash, value) {
 
