@@ -5,7 +5,6 @@ import { App } from "../../App.js";
 import tabata from "../pages/Tabata.js"
 import Emom from "../pages/Emom.js";
 
-
 export default function handleRoute(path) {
     const $app = document.querySelector('#app')
     
@@ -37,8 +36,8 @@ export default function handleRoute(path) {
       case '/tabata':
         location.hash = '/tabata'
         tabata();
-          break;
-           
+        break;
+            
     default:
         App();
         break;
