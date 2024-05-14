@@ -3,7 +3,7 @@ import AudioPlayer from "./AudioPlayer.js"
 import handleCoutnDown from "./handleCountDown.js"
 
 export default function  countDown(totalsec) {
-    let startAudio = new AudioPlayer("../../public/sounds/start.mp3")
+    let startAudio = new AudioPlayer("../../js/helper/sounds/start.mp3")
     const $containerDisplay = DisplayCountDown()
     let $app = document.querySelector('#app')
     let $countDown = 10

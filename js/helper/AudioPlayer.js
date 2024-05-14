@@ -1,3 +1,4 @@
+
 export default class AudioPlayer {
     constructor(src) {
         this.audio = new Audio(src)

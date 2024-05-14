@@ -19,8 +19,7 @@ export default function DisplayGeneral(value) {
             minutesDisplay = time.minutes < 10 ? `0${time.minutes}` : `${time.minutes}`
             secondsDisplay = time.secondsLeft < 10 ? `0${time.secondsLeft}` : `${time.secondsLeft}`
             $containerDisplay.innerHTML = `${minutesDisplay} : ${secondsDisplay}`
-            console.log($containerDisplay)
-            console.log(countDown)
+           
         } else {
             clearInterval()
             $containerDisplay.innerHTML = 'Workout End!'
