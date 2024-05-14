@@ -3,7 +3,7 @@ import handleCoutnDown from "./handleCountDown.js"
 import playSound from "./playSound.js"
 
 export default function  countDown(totalsec) {
-    const urlSound = ("../../public/sounds/start.mp3")
+    const sound = playSound();
     const $containerDisplay = DisplayCountDown()
     let $app = document.querySelector('#app')
     let $countDown = 10
@@ -16,7 +16,7 @@ export default function  countDown(totalsec) {
             $countDown--;
             $containerDisplay.textContent = $countDown;
             if ($countDown === 3) {
-                playSound(urlSound)
+                sound.play()
             }
         } else {
             clearInterval(interval); 

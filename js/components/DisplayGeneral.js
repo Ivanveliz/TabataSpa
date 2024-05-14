@@ -22,7 +22,7 @@ export default function DisplayGeneral(value) {
            
         } else {
             clearInterval()
-            $containerDisplay.innerHTML = 'Workout End!'
+            $containerDisplay.innerHTML = '<p class="work-out-end">Workout End!</p>'
         }
     }, 1000)
 }

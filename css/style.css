@@ -169,7 +169,9 @@ input[type="number"]:focus {
     font-size: 10rem;
 }
 
-
+.work-out-end{
+    font-size: 5rem;
+}
 @media screen and (max-width: 425px) {
 
     #app {
