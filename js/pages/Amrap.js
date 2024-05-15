@@ -11,7 +11,8 @@ export default function amrap() {
     $titleAmrap.classList.add('title')
     document.querySelector('#app').appendChild($titleAmrap)
     ButtonReturn()
-    setUpsForTimeAmrap()
-    ButtonStart()
+    setUpsForTimeAmrap(function (totalSec) {
+        ButtonStart(totalSec)
+    })
    
 }

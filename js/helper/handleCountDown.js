@@ -1,7 +1,7 @@
 import DisplayGeneral from "../components/DisplayGeneral.js";
 
 
-export default function handleCoutnDown(hash, time) {
+export default function handleCoutnDown(hash, time, roundsValue) {
 
     switch (hash) {
         case '#/fortime':
@@ -12,10 +12,11 @@ export default function handleCoutnDown(hash, time) {
             DisplayGeneral(time)
             break;
          case '#/emom':
-            console.log('emom')
+            DisplayGeneral(time, roundsValue)
+            
             break;
          case '#/tabata':
-            console.log('tabata')
+            DisplayGeneral(time)
             break;
         default:
             break;

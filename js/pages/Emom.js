@@ -9,7 +9,15 @@ export default function Emom() {
     $titleEmom.classList.add('title')
     document.querySelector('#app').appendChild($titleEmom)
     ButtonReturn()
-    SetUpsMinutes()
-    ButtonStart()
+
+    SetUpsMinutes(function(totalSec, roundsValue) {
+     
+        const existingButtonStart = document.querySelector('.button-start');
+        if (existingButtonStart) {
+            existingButtonStart.remove();
+        }
+        ButtonStart(totalSec, roundsValue);
+    });
+    
     
 }

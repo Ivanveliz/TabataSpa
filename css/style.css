@@ -111,18 +111,12 @@ html {
 }
 
 .set-ups {
-    max-width: 80%;
-    width: 100%;
+    margin: auto;
+    margin-block: 1.5rem;
+    width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
-}
-
-.emom {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 input[type="number"] {

@@ -12,11 +12,14 @@ export default function setUpsForTimeAmrap(callback){
   
     let totalSec
   
-    let number = document.querySelector('#number')
+  let number = document.querySelector('#number')
+  
   number.addEventListener('input', function () {
-    if (!totalSec) {
+      if (!totalSec) {
       totalSec = calculeTotalSeconds(number.value)
-      callback(totalSec)
+      
+        callback(totalSec)
+        console.log(totalSec)
       }
     })
   
