@@ -6,17 +6,18 @@ export default function timerForTabata(rounds, work, rest, totalSec) {
     const sound = playSound();
     function startRounds(rounds, work, rest) {
         return new Promise((resolve) => {
-            let currentRound = 1      
+            let currentRound = 1  
+            let counterGral = totalSec 
             function startNextRounds() {
-
+                  
                 if (currentRound <= rounds) {
                     let counterWork = work + 1
-                    let counterGral = totalSec +1                
+                                  
 
                     let timerWork = setInterval(() => {
                         counterWork--
                         counterGral--
-                        DisplayTabataWork(currentRound, counterWork, rest, totalSec)
+                        DisplayTabataWork(currentRound, counterWork, rest, counterGral)
                         if (counterWork === 3) {
                             sound.play()
                         }
@@ -26,7 +27,7 @@ export default function timerForTabata(rounds, work, rest, totalSec) {
                             let timerRest = setInterval(() => {
                                 counterRest--
                                 counterGral--
-                                DisplayTabataWork(currentRound, 0 , counterRest, totalSec)
+                                DisplayTabataWork(currentRound, 0 , counterRest, counterGral)
                                 if (counterRest === 3) {
                                     sound.play()
                                 }

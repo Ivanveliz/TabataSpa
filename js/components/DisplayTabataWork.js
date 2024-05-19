@@ -3,7 +3,7 @@ import ButtonReturn from "./ButtonReturn.js"
 import Title from "./Title.js"
 
 export default function DisplayTabataWork(rounds, counterWork, counterRest, totalSec) {
-
+    console.log(totalSec)
     let $title = Title('TABATA')
 
     let $containerDisplay = document.createElement('div')
