@@ -13,7 +13,11 @@ export function forTime() {
     ButtonReturn()
     
     setUpsForTimeAmrap(function (totalSec) {
-        ButtonStart(totalSec)
-    })
+        const existingButtonStart = document.querySelector('.button-start');
+        if (existingButtonStart) {
+            existingButtonStart.remove();
+        }
+        ButtonStart({totalSec});
+    });
          
 }

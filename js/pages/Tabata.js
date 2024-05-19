@@ -1,9 +1,6 @@
 import ButtonReturn from "../components/ButtonReturn.js"
-import SetTimeRest from "../components/SetTImeRest.js"
-import SetTimeWork from "../components/SetTimeWork.js"
-
-import TotalMinutes from "../components/TotalMinutes.js"
 import ButtonStart from "../components/ButtonStart.js"
+import SetUpsTabata from "../components/SetUpsTabata.js"
 
 export default function tabata() {
     document.getElementById('app').innerHTML = ""
@@ -12,10 +9,18 @@ export default function tabata() {
     $titleTabata.classList.add('title')
     document.querySelector('#app').appendChild($titleTabata)
     ButtonReturn()
-    
-    SetTimeWork()
-    SetTimeRest()
-    TotalMinutes()
-    ButtonStart() 
-    console.log(location.hash)
+    SetUpsTabata(function ( rounds, workTime, restTime, totalSec) {
+        const existingButtonStart = document.querySelector('.button-start');
+        if (existingButtonStart) {
+            existingButtonStart.remove();
+        }
+        ButtonStart({
+            roundsValue: rounds,
+            work: workTime,
+            rest: restTime,
+            totalSec: totalSec,
+        }); 
+       
+    })
+
 }

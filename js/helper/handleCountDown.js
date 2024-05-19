@@ -1,22 +1,31 @@
-import DisplayGeneral from "../components/DisplayGeneral.js";
+import Title from "../components/Title.js";
+import timerForAmrap from "./timerForAmrap.js";
+import timerForEmom from "./timerForEmom.js";
+import timerForTabata from "./timerForTabata.js";
+import timerForTime from "./timerForTime.js";
 
 
-export default function handleCoutnDown(hash, time, roundsValue) {
+
+export default function handleCoutnDown(hash, totalSec, roundsValue, work, rest) {
 
     switch (hash) {
         case '#/fortime':
-            DisplayGeneral(time)
+            Title('FOR TIME')
+            timerForTime(totalSec)
             
             break;
         case '#/amrap':
-            DisplayGeneral(time)
+            Title('AMRAP')
+        timerForAmrap(totalSec)
             break;
-         case '#/emom':
-            DisplayGeneral(time, roundsValue)
+        case '#/emom':
+            Title('EMOM')
+            timerForEmom(totalSec,roundsValue)
             
             break;
-         case '#/tabata':
-            DisplayGeneral(time)
+        case '#/tabata':
+            Title('TABATA')
+            timerForTabata(roundsValue,work,rest, totalSec)
             break;
         default:
             break;

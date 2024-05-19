@@ -5,22 +5,19 @@ export default function setUpsForTimeAmrap(callback){
     $containerSetUps.classList.add('container-set-ups')
     $containerSetUps.innerHTML = `
     <span class="span">For</span>
-    <input type="number" id="number">
+    <input type="number" id="total-minutes">
     <span class="span">minutes</span>
     `
     document.querySelector('#app').appendChild($containerSetUps)
   
-    let totalSec
+  let totalSec
+  let minutes = document.querySelector('#total-minutes')
   
-  let number = document.querySelector('#number')
-  
-  number.addEventListener('input', function () {
-      if (!totalSec) {
-      totalSec = calculeTotalSeconds(number.value)
-      
-        callback(totalSec)
-        console.log(totalSec)
-      }
-    })
-  
+
+  const updateMinutes= () => {
+    totalSec = calculeTotalSeconds(minutes.value)
+    callback(totalSec)
+  }
+
+minutes.addEventListener('input', updateMinutes)
 }

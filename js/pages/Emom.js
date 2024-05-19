@@ -1,6 +1,7 @@
 import ButtonReturn from "../components/ButtonReturn.js"
 import ButtonStart from "../components/ButtonStart.js"
-import SetUpsMinutes from "../components/SetUpsMinutes.js"
+import SetUpsEmom from "../components/SetUpsEmom.js"
+
 
 export default function Emom() {
     document.getElementById('app').innerHTML = ""
@@ -10,13 +11,12 @@ export default function Emom() {
     document.querySelector('#app').appendChild($titleEmom)
     ButtonReturn()
 
-    SetUpsMinutes(function(totalSec, roundsValue) {
-     
+    SetUpsEmom(function(totalSec, roundsValue) {    
         const existingButtonStart = document.querySelector('.button-start');
         if (existingButtonStart) {
             existingButtonStart.remove();
         }
-        ButtonStart(totalSec, roundsValue);
+        ButtonStart({totalSec, roundsValue});
     });
     
     

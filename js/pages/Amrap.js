@@ -1,10 +1,11 @@
 import ButtonReturn from "../components/ButtonReturn.js"
-import setUpsForTimeAmrap from "../components/SetUpsForTimeAmrap.js"
 import ButtonStart from "../components/ButtonStart.js"
+import setUpsForTimeAmrap from "../components/SetUpsForTimeAmrap.js"
 
 
 
 export default function amrap() {
+    ButtonReturn()
     document.getElementById('app').innerHTML = ""
     const $titleAmrap = document.createElement('h2')
     $titleAmrap.innerText = 'Amrap'
@@ -12,7 +13,11 @@ export default function amrap() {
     document.querySelector('#app').appendChild($titleAmrap)
     ButtonReturn()
     setUpsForTimeAmrap(function (totalSec) {
-        ButtonStart(totalSec)
-    })
+        const existingButtonStart = document.querySelector('.button-start');
+        if (existingButtonStart) {
+            existingButtonStart.remove();
+        }
+        ButtonStart({totalSec});
+    });
+    }
    
-}

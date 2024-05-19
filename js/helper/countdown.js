@@ -2,7 +2,7 @@ import DisplayCountDown from "../components/DisplayCountDown.js"
 import handleCoutnDown from "./handleCountDown.js"
 import playSound from "./playSound.js"
 
-export default function  countDown(totalsec , roundsValue) {
+export default function  countDown(totalsec , roundsValue, work, rest) {
     const sound = playSound();
     const $containerDisplay = DisplayCountDown()
     let $app = document.querySelector('#app')
@@ -20,8 +20,7 @@ export default function  countDown(totalsec , roundsValue) {
             }
         } else {
             clearInterval(interval); 
-            
-            handleCoutnDown(location.hash, totalsec, roundsValue); 
+            handleCoutnDown(location.hash, totalsec, roundsValue, work, rest); 
         }
     }
     let interval = setInterval(startCountDown, 1000);

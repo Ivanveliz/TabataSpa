@@ -8,7 +8,7 @@ export function App() {
     const $app = document.getElementById('app')
     $app.innerHTML = ""
 
-    $app.appendChild(Title())
+    $app.appendChild(Title('Tabata Timer'))
     $app.appendChild(Menu())
     $app.append(footer())
     

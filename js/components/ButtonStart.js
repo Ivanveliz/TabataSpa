@@ -1,7 +1,9 @@
 import countDown from "../helper/countdown.js"
 
 
-export default function ButtonStart(totalsec, roundsValue) {
+export default function ButtonStart(options) {
+    let { totalSec, roundsValue, work, rest } = options;
+
     let $buttonStart = document.createElement('button')
     $buttonStart.id = 'button-start'
     $buttonStart.textContent = 'START'
@@ -10,8 +12,8 @@ export default function ButtonStart(totalsec, roundsValue) {
     document.querySelector('#app').appendChild($buttonStart)
   
     document.querySelector('#button-start').addEventListener('click', e => {
-        countDown(totalsec, roundsValue)
-        console.log(totalsec)
+        countDown( totalSec,roundsValue, work, rest)
+       
     })
     
 }

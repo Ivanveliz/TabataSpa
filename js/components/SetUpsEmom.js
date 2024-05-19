@@ -2,7 +2,7 @@
 import { calculeTotalSeconds } from "../helper/calculeTotalSeconds.js"
 
 
-export default function SetUpsMinutes(callback) {
+export default function SetUpsEmom(callback) {
 
     let $containerSetUps = document.createElement('div')
     $containerSetUps.classList.add('container-set-ups')
@@ -25,15 +25,12 @@ export default function SetUpsMinutes(callback) {
     let minutes = document.querySelector('#minutes')
     let rounds = document.querySelector('#rounds')
 
-
     const updateAndCallback = () => {
-        const minutesValue = parseFloat(minutes.value) || 1;
-        const roundsValue = parseFloat(rounds.value) || 1;
-        console.log(`Minutes: ${minutesValue}, Rounds: ${roundsValue}`);
-
-        const totalrounds = minutesValue * roundsValue;
+        const minutesValue = parseFloat(minutes.value) || 1
+        const roundsValue = parseFloat(rounds.value) || 1
+        const totalrounds = minutesValue * roundsValue
         let totalSec = calculeTotalSeconds(totalrounds)
-        console.log(`Total Seconds: ${totalSec}`);
+       
         callback(totalSec, roundsValue);
     }
     
