@@ -19,7 +19,7 @@ export default function SetUpsTabata(callback) {
         <div class= "set-ups"> 
         <span class="span">Rest</span>
             <input type="number" id="rest-tabata">
-        <span class="span">secods</span>
+        <span class="span">Seconds</span>
     </div>
 
     <div class="info-text"><span id="total-time"> Tiempo total: 00:00 </span></div>
